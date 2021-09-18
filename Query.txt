@@ -1,0 +1,19 @@
+"""
+1.Create network management tool:
+	-Assign IP address
+		-Menu for interface
+	-Delete IP address
+		-Menu for interfaces
+	-Display IP address
+	-Display all interfaces
+	-Configure routing
+	-Turn On/Off interface
+	-Add ARP entry
+	-Delete ARP Entry
+	-Restart Network
+	-Change hostname
+	-Add DNS server entry#Menu driven Network Management:
+
+
+"""
+
