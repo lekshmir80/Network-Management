@@ -85,7 +85,7 @@ def off_on_interface():
 def add_arp():
 	ip_address = Prompt.ask("\tEnter the ip address to be add")
 	interface_ch= interface_list()
-	arp_cache_ch = arp_list()
+	arp_cache_ch = Prompt.ask("\tEnter the mac address to be add")
 	os.popen(f'sudo ip n add {ip_address} lladdr {arp_cache_ch} dev {interface_ch}').read()
 	yprint("\tAdded")
 	
@@ -105,7 +105,8 @@ def change_host():
 	yprint("\tHostname Changed")
 
 def add_dns_entry():
-	os.popen('sudo cat >>/etc/resolv.conf').read()
+	ip_address = Prompt.ask("\tEnter the ip address")
+	os.popen(f'sudo echo nameserver {ip_address} >>/etc/resolv.conf').read()
 	yprint("\t Added")
 
 def menu_route():
